@@ -1,95 +1,133 @@
-# 📚 Topics & Series Strategy
+# 📚 Topics & Series Master Plan
 
-> **Tất cả content được tổ chức theo CHUỖI BÀI VIẾT (Series) thay vì bài đơn lẻ. Mỗi Series là một câu chuyện có đầu có cuối — xây dựng audience trung thành qua từng tập.**
-
----
-
-## 📐 Framework Lựa Chọn Series
-
-Khi một topic mới nảy ra, đánh giá theo 3 tiêu chí:
-
-| Tiêu chí | Câu hỏi | Điểm (1-5) |
-|----------|---------|------------|
-| **Uniqueness** | Chỉ mình tôi mới kể được chuyện này không? | |
-| **Depth** | Có đủ chất để viết 3+ bài không? | |
-| **Audience Pull** | Người đọc có muốn đọc tập tiếp không? | |
-
-> Series nào đạt tổng **≥ 10 điểm** thì triển khai. Dưới 10 → viết bài đơn hoặc bỏ.
+> **Single Source of Truth cho toàn bộ kế hoạch nội dung. AI đọc file này để biết series nào đang có, bài nào thuộc tập nào, và sườn từng bài ra sao.**
 
 ---
 
-## 🎬 Series Đang Lên Kế Hoạch
+## 🗂️ Danh sách Series
+
+| # | Series | Status | Platform chính |
+|---|--------|--------|----------------|
+| S1 | [Co-work với AI Agent](#series-1) | 🔥 Active — Viết ngay | LinkedIn + Medium + Hashnode |
+| S2 | [Build In Public — Indie App](#series-2) | 🔄 Song song | LinkedIn + X + Medium |
+| S3 | [Góc Nhìn Thực Tế Về AI](#series-3) | ⏳ Sau S1 có 2-3 bài | Medium + Dev.to |
+| S4 | [Thiết Kế Sản Phẩm Một Mình](#series-4) | 🅿️ Parked | Medium |
 
 ---
 
-### Series 1: "Người Lập Trình Viên & AI — Từ Vibe Coding Đến Context Engineering"
+## Distribution Strategy (Hub & Spoke)
 
-> **Tagline**: *"Từ 'cứ vậy mà code' đến 'thiết kế cả não AI' — câu chuyện của một dev Việt Nam thực sự làm điều đó."*
-
-**Vì sao Series này?** Anh đang SỐNG trong giai đoạn chuyển tiếp này. Không phải viết lý thuyết — mà là hồi ký thực tế.
-
-| Tập | Tên Bài | Nội dung cốt lõi | Status |
-|-----|---------|-----------------|--------|
-| 1 | "Vibe Coding là gì và tại sao tôi ghét cái tên đó" | Định nghĩa thực tế, không phải theo Karpathy. Cái hay và cái dở khi "cứ vậy mà code" | `idea` |
-| 2 | "Khi Vibe Coding không đủ — tôi bắt đầu thiết kế context" | Điểm gãy: lần đầu AI hiểu sai ý, và cách tôi fix bằng context | `idea` |
-| 3 | "AI_CONTEXT.md — cái file kỳ lạ tôi viết cho AI đọc" | Walkthrough thực tế của AI_CONTEXT.md trong workspace của tôi | `idea` |
-| 4 | "Context Engineering: kỹ năng quan trọng nhất của dev 2025" | Định nghĩa, framework, và tại sao nó khác Prompt Engineering | `idea` |
-| 5 | "Kết quả sau 6 tháng làm việc với AI như một 'Technical Co-founder'" | Số liệu thật: tiết kiệm bao nhiêu giờ, ship bao nhiêu feature | `idea` |
-
-**Platform**: LinkedIn (tóm tắt) + Medium (full version) + Hashnode (cross-post)
-**Lịch đăng gợi ý**: 2 tuần/tập
+```
+Medium (bài chính, full version ~1500-2000 từ)
+    ↑
+    ├── LinkedIn (~200-300 từ tóm tắt + link)
+    ├── Facebook (~100-150 từ tiếng Việt casual + link)
+    ├── Hashnode (cross-post y hệt Medium, canonical → Medium)
+    └── X/Twitter (Thread 5-7 tweets, tease story + link)
+```
 
 ---
 
-### Series 2: "Build In Public — Hành Trình Indie App Từ $0"
+## 🎯 Series 1: "Co-work Với AI Agent — Khi Developer Trở Thành Người Ra Quyết Định" {#series-1}
 
-> **Tagline**: *"Không có team, không có marketing budget, không có network. Chỉ có code, ASO, và sự kiên trì."*
+> **Tagline**: *"AI là coder của bạn. Vậy bạn là ai?"*
+> **Core Insight**: Khi AI đảm nhận vai trò "người viết code", người làm việc cùng AI buộc phải đồng thời là PM, Architect, QA, UX Designer và Tech Lead. Decision-making — không phải coding — mới là kỹ năng cốt lõi.
 
-**Vì sao Series này?** Số liệu thực (download, revenue, rating) là thứ hiếm nhất trên internet Việt Nam tech.
+### Episode Map
 
-| Tập | Tên Bài | Nội dung cốt lõi | Status |
-|-----|---------|-----------------|--------|
-| 1 | "Tôi ship App đầu tiên lên App Store và đây là điều xảy ra" | Toàn bộ hành trình từ idea → submit → live. Số liệu tuần đầu | `idea` |
-| 2 | "ASO thực tế: Tôi đã làm gì để App được tìm thấy mà không tốn đồng nào" | Keyword research, metadata, screenshot optimization | `idea` |
-| 3 | "Tháng đầu tiên: Bao nhiêu download, bao nhiêu revenue, bao nhiêu bài học" | Monthly report thật — không tô hồng | `idea` |
-| 4 | "Tại sao tôi không làm marketing — và đó là quyết định đúng" | Philosophy ASO-first. Tradeoff giữa organic vs paid | `idea` |
-| 5+ | Monthly update (tháng 2, 3, 4...) | Build In Public định kỳ | `idea` |
+| Tập | File | Tiêu đề | Core Message | Status |
+|-----|------|---------|--------------|--------|
+| **0** | `series1-tap0-prequel.md` | "Khi AI là Coder — Bạn Phải Trở Thành Tất Cả Những Người Còn Lại" | Overview: vai trò developer thay đổi hoàn toàn khi co-work với AI | `idea` → **Viết trước nhất** |
+| **1** | `series1-tap1-pm.md` | "Làm PM Khi Co-work Với AI: Đặt Câu Hỏi Đúng Còn Quan Trọng Hơn Code Đúng" | Skill quan trọng nhất: Define rõ bài toán trước khi bảo AI làm gì | `idea` |
+| **2** | `series1-tap2-architect.md` | "Làm Architect Khi Co-work Với AI: AI Làm Theo Bất Cứ Điều Bạn Nói — Kể Cả Khi Sai" | Decision về cấu trúc, trade-off. AI execute giỏi — nhưng execute cái gì? | `idea` |
+| **3** | `series1-tap3-qa.md` | "Làm QA Khi Co-work Với AI: Tin Tưởng Nhưng Luôn Verify" | AI không tự biết nó sai. Reviewer là vai trò không thể bỏ | `idea` |
+| **4** | `series1-tap4-ux.md` | "Làm UX Designer Khi Co-work Với AI: AI Không Biết Cảm Xúc Người Dùng" | Empathy, flow, storytelling — AI không có, người phải có | `idea` |
+| **5** | `series1-tap5-context-eng.md` | "Context Engineering — Giải Pháp Cho Tất Cả Những Vấn Đề Trên" | Pull everything together. Giới thiệu AI_CONTEXT.md và hệ thống của tôi | `idea` |
 
-**Platform**: LinkedIn + X (short update) + Medium (full report)
-**Lịch đăng gợi ý**: Monthly update cố định (cuối tháng)
+### Lịch đăng gợi ý
+
+- Tập 0: **Càng sớm càng tốt** (bài khai màn)
+- Tập tiếp theo: Mỗi 2 tuần
+
+### Sườn chi tiết Tập 0 (Bài viết đầu tiên)
+
+```
+TIÊU ĐỀ: Khi AI Là Coder Của Bạn —
+          Bạn Phải Trở Thành Tất Cả Những Người Còn Lại
+
+HOOK (~100 từ)
+  "Tôi giao cho AI viết toàn bộ một màn hình iOS.
+  Code chạy hoàn hảo. Nhưng sai hoàn toàn những gì tôi muốn.
+  Lỗi không phải ở AI. Lỗi ở tôi —
+  vì tôi vẫn nghĩ mình đang là một coder truyền thống."
+
+PHẦN 1: Cái bẫy của Vibe Coding (~300 từ)
+  - Developer thêm AI vào workflow nhưng giữ mindset cũ
+  - "Tôi bảo nó làm, nó làm" — tư duy sai ở đâu?
+  - Case study thực: một lần tôi bị AI dẫn đi lạc hoàn toàn
+
+PHẦN 2: Vai trò developer thay đổi (~400 từ)
+  Trước: Dev = người viết code
+  Sau:   Dev = người đưa ra quyết định ở mọi tầng
+
+  → PM: Cái gì? Tại sao? Cho ai? Scope đến đâu?
+  → Architect: Cấu trúc thế nào? Trade-off là gì?
+  → QA: Output này có đúng không? Đúng về mặt nào?
+  → UX: Người dùng thực sự trải nghiệm gì?
+  → Tech Lead: Tôi có đang dẫn AI đúng hướng không?
+
+PHẦN 3: Decision Quality = Output Quality (~300 từ)
+  - AI execute rất tốt — nhưng execute cái gì?
+  - Bad decision → AI execute perfectly → Bad product
+  - Kỹ năng cốt lõi không còn là coding, là decision-making
+
+KẾT + CTA (~150 từ)
+  - Loạt bài tiếp theo đi sâu vào từng vai trò
+  - Tập 1: "Làm PM khi co-work với AI"
+  - CTA: Follow để không bỏ lỡ
+```
 
 ---
 
-### Series 3: "Góc Nhìn Thực Tế Về AI Trong Công Việc Dev"
+## 🏗️ Series 2: "Build In Public — Hành Trình Indie App Từ $0" {#series-2}
 
-> **Tagline**: *"Không hype, không doom. Chỉ là những gì thực sự xảy ra khi một Senior Dev dùng AI hàng ngày."*
+> **Tagline**: *"Không team, không marketing budget, không network. Chỉ có code, ASO và sự kiên trì."*
+> **Format**: Monthly report thực tế (số liệu thật: downloads, revenue, ratings)
 
-| Tập | Tên Bài | Nội dung cốt lõi | Status |
-|-----|---------|-----------------|--------|
-| 1 | "AI không thay thế tôi — nó làm tôi 10x tệ hơn hoặc 10x tốt hơn" | Cái bẫy khi dùng AI sai cách vs đúng cách | `idea` |
-| 2 | "Tôi đã dùng AI để viết 80% code và đây là hậu quả" | Technical debt, code không hiểu, và bài học | `idea` |
-| 3 | "Prompt Engineering thực chiến: 5 pattern tôi dùng mỗi ngày" | Không tutorial — là những prompt thật tôi dùng để code iOS | `idea` |
-| 4 | "Kilo, Copilot, Claude, Cursor — Tôi đã dùng tất cả và đây là nhận xét" | Honest review từ góc độ người dùng thực tế | `idea` |
-
-**Platform**: LinkedIn + Medium + Dev.to (để reach global)
-
----
-
-### Series 4: "Thiết Kế Sản Phẩm Một Mình" *(Future — Khi có đủ experience)*
-
-> **Tagline**: *"Khi một developer phải tự làm UX, UI, PM, Marketing và Customer Support."*
-
-| Tập | Nội dung cốt lõi | Status |
-|-----|-----------------|--------|
-| 1 | "No Team, No Problem — Cách tôi đưa ra quyết định design một mình" | `parked` |
-| 2 | "Storytelling-driven UI: Tại sao app của tôi phải 'kể chuyện'" | `parked` |
-| 3 | "Từ reject App Store đến 4.8 stars — câu chuyện về Attention to Detail" | `parked` |
+| Tập | Tiêu đề | Status |
+|-----|---------|--------|
+| 1 | "Ship App đầu tiên: Từ idea đến App Store — và đây là điều xảy ra" | `idea` |
+| 2 | "ASO thực tế: Tôi làm gì để App được tìm thấy mà không tốn đồng nào" | `idea` |
+| 3 | "Tháng đầu tiên: Download, Revenue, Bài học" | `idea` |
+| 4+ | Monthly Build In Public Report | `recurring` |
 
 ---
 
-## 🗂️ Bài Đơn Lẻ (Standalone — Không thuộc Series nào)
+## 📡 Series 3: "Góc Nhìn Thực Tế Về AI Trong Công Việc Dev" {#series-3}
 
-Những insight nhỏ, hot take, hoặc bài chia sẻ nhanh không đủ depth cho một Series:
+> **Viết sau khi Series 1 có ít nhất 2-3 bài đã published**
+
+| Tập | Tiêu đề | Status |
+|-----|---------|--------|
+| 1 | "AI Không Thay Thế Tôi — Nó Làm Tôi 10x Tệ Hơn Hoặc 10x Tốt Hơn" | `parked` |
+| 2 | "Tôi Dùng AI Viết 80% Code — Và Đây Là Hậu Quả" | `parked` |
+| 3 | "Kilo, Copilot, Claude, Cursor — Honest Review Từ Người Dùng Thực Tế" | `parked` |
+
+---
+
+## 🎨 Series 4: "Thiết Kế Sản Phẩm Một Mình" {#series-4}
+
+> **Parked — Chờ thêm experience. Không viết vội.**
+
+| Tập | Tiêu đề | Status |
+|-----|---------|--------|
+| 1 | "No Team, No Problem — Cách Tôi Ra Quyết Định Design Một Mình" | `parked` |
+| 2 | "Storytelling-driven UI: Tại Sao App Phải Kể Chuyện" | `parked` |
+| 3 | "Từ Reject App Store Đến 4.8 Stars" | `parked` |
+
+---
+
+## 📝 Standalone Posts (Không thuộc Series)
 
 - "5 điều tôi ước mình biết trước khi làm Indie"
 - "Tại sao tôi chọn SwiftUI thay vì Flutter năm 2025"
@@ -97,12 +135,14 @@ Những insight nhỏ, hot take, hoặc bài chia sẻ nhanh không đủ depth 
 
 ---
 
-## 🏆 Priority (Thứ tự triển khai)
+## 🏆 Priority Order
 
 ```
-1. Series 1 (AI + Context Engineering)  ← BẮT ĐẦU NGAY - topic đang hot nhất
-2. Series 2 (Build In Public)           ← Song song, monthly update
-3. Standalone posts                     ← Điền vào gap giữa các tập
-4. Series 3 (Góc nhìn AI)              ← Sau khi có 2-3 bài từ Series 1
-5. Series 4                             ← Giữ ý, chờ thêm experience
+1. Series 1 - Tập 0  ← BẮT ĐẦU NGAY (bài khai màn Series)
+2. Series 1 - Tập 1  ← 2 tuần sau
+3. Series 2 - Tập 1  ← Có thể viết song song
+   ...
+4. Series 1 - Tập 2, 3, 4, 5
+5. Series 3
+6. Series 4
 ```
