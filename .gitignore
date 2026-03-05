@@ -1,0 +1,29 @@
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+
+# Environment & Dependencies
+node_modules/
+venv/
+env/
+.env
+
+# Temp/Auto-generated
+dist/
+build/
+*.log
+_temp/
+__pycache__/
+
+# macOS
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# IDEs
+.idea/
+.vscode/
+*.xcworkspace
+xcuserdata/
