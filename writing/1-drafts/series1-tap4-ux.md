@@ -58,18 +58,15 @@ Thay vì nói với AI "vẽ cho mình màn hình X," hãy làm thêm một bư�
 
 **Bước 1:** Viết text User Journey:
 
-```
-User mở hệ thống → Thấy trạng thái hiện tại →
-Muốn review detail → Chọn action → Confirm → Nhận kết quả
-```
+*User mở hệ thống → Thấy trạng thái hiện tại → Muốn review detail → Chọn action → Confirm → Nhận kết quả*
 
 **Bước 2:** Identify "moment of doubt" — lúc user có thể bỏ đi:
 
-```
-→ Moment 1: Mở hệ thống, không thấy trạng thái tổng quan → "App này có hoạt động không?"
-→ Moment 2: Nhìn vào detail, không hiểu metric nào quan trọng → "Mình cần làm gì tiếp?"
-→ Moment 3: Đến bước confirm, không chắc action này reversible → "Có cancel được không?"
-```
+→ Moment 1: Mở hệ thống, không thấy trạng thái tổng quan → *"App này có hoạt động không?"*
+
+→ Moment 2: Nhìn vào detail, không hiểu metric nào quan trọng → *"Mình cần làm gì tiếp?"*
+
+→ Moment 3: Đến bước confirm, không chắc action này reversible → *"Có cancel được không?"*
 
 **Bước 3:** Chỉ sau đó mới feed cho AI: "Vẽ interface cho flow này, phải giải quyết 3 moment of doubt: trạng thái tổng quan visible ngay, metric quan nhất được highlight, confirmation rõ ràng với option cancel."
 
