@@ -40,13 +40,11 @@ Khi bạn bảo AI "vẽ cho mình một dashboard," nó sẽ sinh ra một cái
 
 ### 2. Phân biệt UI (AI làm được) và UX (bạn phải làm)
 
-| Khía cạnh | AI làm tốt | Bạn phải quyết định |
-| --- | --- | --- |
-| **Layout** | Responsive grid, spacing system | Thông tin nào user thấy đầu tiên? |
-| **Visual** | Color, typography, icon | Cảm giác tổng thể có match context không? |
-| **Flow** | Generate màn hình tiếp theo | Có cần màn hình đó không? |
-| **Copy** | Tạo text cho button/label | Tone có match expectation của user không? |
-| **Animation** | Implement transition | Animation này thêm giá trị hay làm rối? |
+- **Layout:** AI tốt — responsive grid, spacing system. Bạn quyết định — thông tin nào user thấy đầu tiên.
+- **Visual:** AI tốt — color, typography, icon. Bạn quyết định — cảm giác tổng thể có match context không.
+- **Flow:** AI tốt — generate màn hình tiếp theo. Bạn quyết định — có cần màn hình đó không.
+- **Copy:** AI tốt — tạo text cho button/label. Bạn quyết định — tone có match expectation của user không.
+- **Animation:** AI tốt — implement transition. Bạn quyết định — animation này thêm giá trị hay làm rối.
 
 Cột bên phải — đó là UX. Và mỗi câu hỏi đó đều cần bạn hiểu user thật, không phải "average user" trong training data của AI.
 
