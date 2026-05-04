@@ -37,11 +37,20 @@ AI optimize cho moment hiện tại — code ngắn hơn, pattern hiện đại 
 
 Sau vài lần AI refactor "hoàn hảo" xong thì hệ thống vỡ, mình rút ra một bộ rule mà mình luôn enforce trước khi nhờ AI touch vào kiến trúc.
 
-**Invariant files — file nào AI không được phép động vào.**
+**Invariant docs — file nào AI phải đọc trước khi code.**
 
-Trong hệ thống mình có một file tên là `soul.md`. Đây là file chứa các hard-rule tối thượng — mọi agent phải đọc nó trước khi làm bất cứ điều gì. Nó nằm tách biệt khỏi code, vì nếu AI refactor, nó sẽ merge file này vào chỗ khác "cho gọn" — và system invariant bị mất.
+Trong dự án mình có một `docs/index.md`. Đây là file đầu tiên — và gần như duy nhất — AI cần đọc khi vào project. Nó không phải README thông thường. Nó là một routing table:
 
-Mỗi project cần ít nhất một file kiểu này: định nghĩa các rule không được vi phạm, các boundary không được phá, các decision không được override. Mình đặt tên nó là `ARCHITECTURE.md` hoặc `INVARIANTS.md` — tên gì không quan trọng. Quan trọng là AI biết: *đây là file đọc, không phải file sửa.*
+- Khi AI mới vào → đọc file này để biết kiến trúc tổng thể, 6 domains, dependency direction giữa các domain.
+- Khi AI cần implement task → phải đọc design-patterns.md trước, xác định pattern áp dụng, rồi mới đụng vào code.
+- Khi AI cần fix bug → bảng diagnostics chỉ ngay log nào cần đọc, worker nào cần check.
+- Khi AI design feature mới → map tới đúng domain doc, không đoán mò.
+
+Quan trọng nhất: file này định nghĩa một **5-phase workflow bắt buộc** — PRE-CODE → CODE → SELF-VERIFY → REVIEW → COMMIT. AI không được skip bất kỳ phase nào. Nếu Phase 3 (self-verify) fail → fix → re-verify. Không commit khi còn fail.
+
+AI sẽ không tự tạo ra cái này. Nó chỉ thấy code hiện tại và bắt đầu viết. Nhưng nếu bạn cho nó cái map — nó sẽ follow đúng kiến trúc bạn muốn.
+
+Mỗi project cần ít nhất một file kiểu này: map kiến trúc, domain boundaries, dependency direction, và workflow bắt buộc. Tên gì không quan trọng — `docs/index.md`, `ARCHITECTURE.md`, `INVARIANTS.md` đều được. Quan trọng là: *AI đọc file này trước khi code, và không được sửa nó.*
 
 **Single source of truth cho config.**
 
@@ -79,7 +88,7 @@ AI nhìn thấy code dùng callback → suggest đổi sang Promise. Nhìn thấ
 
 Bạn không cần phải viết mọi dòng code. Nhưng bạn cần biết **dòng nào không được phép sai kiến trúc.**
 
-1. **Có ít nhất một invariant file** — `soul.md`, `ARCHITECTURE.md`, gì cũng được. AI đọc, không sửa.
+1. **Có một docs/index.md** — architecture map + routing table + workflow bắt buộc. AI đọc trước khi code, không sửa.
 2. **Config không bao giờ hardcode** — yaml/json là single source of truth, code chỉ read.
 3. **Enforce dependency direction** — high-level không phụ thuộc low-level. Không ai bypass layer.
 4. **Không refactor nếu không có gì broken** — "cho nó modern hơn" không phải lý do.
