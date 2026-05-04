@@ -40,7 +40,7 @@ Khi bạn bảo AI "vẽ cho mình một dashboard," nó sẽ sinh ra một cái
 
 ### 2. Phân biệt UI (AI làm được) và UX (bạn phải làm)
 
-| | AI làm tốt | Bạn phải quyết định |
+| Khía cạnh | AI làm tốt | Bạn phải quyết định |
 |---|---|---|
 | **Layout** | Responsive grid, spacing system | Thông tin nào user thấy đầu tiên? |
 | **Visual** | Color, typography, icon | Cảm giác tổng thể có match context không? |
@@ -58,14 +58,12 @@ Thay vì nói với AI "vẽ cho mình màn hình X," hãy làm thêm một bư�
 
 **Bước 1:** Viết text User Journey:
 
-*User mở hệ thống → Thấy trạng thái hiện tại → Muốn review detail → Chọn action → Confirm → Nhận kết quả*
+User mở hệ thống → Thấy trạng thái hiện tại → Muốn review detail → Chọn action → Confirm → Nhận kết quả
 
 **Bước 2:** Identify "moment of doubt" — lúc user có thể bỏ đi:
 
 → Moment 1: Mở hệ thống, không thấy trạng thái tổng quan → *"App này có hoạt động không?"*
-
 → Moment 2: Nhìn vào detail, không hiểu metric nào quan trọng → *"Mình cần làm gì tiếp?"*
-
 → Moment 3: Đến bước confirm, không chắc action này reversible → *"Có cancel được không?"*
 
 **Bước 3:** Chỉ sau đó mới feed cho AI: "Vẽ interface cho flow này, phải giải quyết 3 moment of doubt: trạng thái tổng quan visible ngay, metric quan nhất được highlight, confirmation rõ ràng với option cancel."
@@ -77,26 +75,22 @@ Bây giờ AI vẽ UI. Nhưng UX là của bạn.
 ### 4. Anti-pattern UX AI hay làm — và cách chặn
 
 **Anti-pattern 1: "Everything is important"**
-
 AI generate một dashboard với 15 metric, tất cả đều được highlight, chart đẹp, color rực rỡ. Kết quả: user không biết nhìn vào đâu. Cách chặn: định nghĩa trước — metric nào là "north star" (1-2 cái), metric nào là "supporting" (3-5 cái), cái còn lại hide trong detail view.
 
 **Anti-pattern 2: "Flow quá dài"**
-
 AI design một onboarding 5 bước, một checkout 4 màn hình, một settings page với 20 option. Mỗi bước đều có lý do hợp lý — nhưng user không đọc. Họ scroll, họ skip, họ bỏ. Cách chặn: trước khi nhờ AI design, hỏi "Cái gì là minimum để user hoàn thành task?" Sau đó cut bất cứ thứ gì không phục vụ task đó.
 
 **Anti-pattern 3: "Error state không có"**
-
 AI sinh ra happy path hoàn hảo — nhưng không có empty state, không có loading state, không có error state. Khi data chưa có, user thấy màn hình trắng. Khi network lỗi, user thấy crash. Cách chặn: với mỗi screen, yêu cầu AI generate cả 4 state: default/empty, loading, success, error.
 
 **Anti-pattern 4: "Platform guideline bị ignore"**
-
 Mỗi platform có convention riêng — iOS Human Interface Guidelines, Material Design, Web Accessibility standards. AI biết tất cả — nhưng không tự động follow đúng. Nó sinh ra UI "chung chung" — không sai platform nào, nhưng cũng không đúng platform nào. Cách chặn: sau khi AI vẽ xong, check qua platform guideline checklist. Những thứ cơ bản như: interactive element có hit target đủ lớn không, text có readable ở size lớn không, contrast ratio có đạt chuẩn không.
 
 ---
 
 ### Tóm lại: AI vẽ, bạn cảm nhận
 
-Bạn không cần học Design. Bạn chỉ cần nhớ:
+Bạn chỉ cần nhớ:
 
 1. **User Journey trước, UI sau** — viết flow ra, identify moment of doubt, rồi mới nhờ AI vẽ.
 2. **UI ≠ UX** — AI làm đẹp, bạn làm dễ dùng.
