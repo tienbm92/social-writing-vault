@@ -41,7 +41,7 @@ Khi bạn bảo AI "vẽ cho mình một dashboard," nó sẽ sinh ra một cái
 ### 2. Phân biệt UI (AI làm được) và UX (bạn phải làm)
 
 | Khía cạnh | AI làm tốt | Bạn phải quyết định |
-|---|---|---|
+| --- | --- | --- |
 | **Layout** | Responsive grid, spacing system | Thông tin nào user thấy đầu tiên? |
 | **Visual** | Color, typography, icon | Cảm giác tổng thể có match context không? |
 | **Flow** | Generate màn hình tiếp theo | Có cần màn hình đó không? |
