@@ -1,6 +1,8 @@
-# Co-work Với AI Agent (Episode 0): Khi AI Là Coder Của Bạn
+# Co-work Với AI Agent (Tập 0): Khi AI Là Coder Của Bạn
 
 *Khi AI gõ phím thay bạn, vai trò của bạn không biến mất — nó thăng cấp.*
+
+> **Series:** Co-work Với AI Agent | **Tập:** 0/5
 
 ![Khi AI Là Coder Của Bạn - Cover](/Users/tienbm92/Tienbm92/IOS-APP/social-writing-vault/assets/khi-ai-la-coder-cua-ban/cover.png)
 
