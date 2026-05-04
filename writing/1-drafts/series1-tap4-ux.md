@@ -10,7 +10,7 @@
 
 AI có thể sinh ra một interface hoàn chỉnh trong vòng 30 giây — dashboard, form, navigation, tất cả layout cân đối, spacing chuẩn, color scheme hài hòa. Nhìn qua, rất "professional."
 
-Nhấn mạnh: nhìn qua.
+Nhưng chỉ đẹp ở bề ngoài.
 
 Thực tế là: AI được train trên hàng triệu UI đẹp. Nó biết UI đẹp trông như thế nào. Nhưng nó không biết:
 
