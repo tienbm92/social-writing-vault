@@ -8,11 +8,11 @@
 
 Ở Tập 2, mình nói về việc giữ "xương sống" kiến trúc — invariant docs, dependency direction, anti-pattern refactor. Nhưng có một điều mình nhận ra sau đó: Giữ được kiến trúc là tốt. Nhưng nếu requirement mơ hồ, AI sẽ xây đúng cấu trúc — mà sai hoàn toàn tính năng.
 
-Mình từng có một task: *"Thêm tính năng notify trước khi position entry."*
+Mình từng có một task: *"Thêm tính năng notify trước khi hệ thống execute action."*
 
-AI hiểu đúng từng từ. Nó tạo một notification system hoàn chỉnh — gửi Discord message 30 giây trước khi entry. UI đẹp, logic chạy ổn.
+AI hiểu đúng từng từ. Nó tạo một notification system hoàn chỉnh — gửi message qua Discord 30 giây trước khi action được thực thi. Logic chạy ổn.
 
-Nhưng cái mình cần không phải là notify Discord. Cái mình cần là: trước khi hệ thống tự động đặt lệnh, có một khoảng pause để mình confirm — hoặc cancel nếu thấy thị trường đang biến động bất thường.
+Nhưng cái mình cần không phải là notify. Cái mình cần là: trước khi hệ thống tự động execute, có một khoảng pause để mình confirm — hoặc cancel nếu thấy điều kiện không còn phù hợp.
 
 AI không biết điều đó. Vì mình chưa nói với nó. Mình nói "notify" — mình nghĩ trong đầu là "confirm window". Hai khái niệm khác nhau hoàn toàn.
 
@@ -38,7 +38,7 @@ Qua thời gian, mình rút ra một bộ câu hỏi mà mình luôn tự trả 
 
 **"Who" — Ai dùng tính năng này?**
 
-Không phải "user" chung chung. Phải cụ thể: New user chưa từng tương tác với hệ thống? Hay user đang trong position và cần thông tin gấp? Hành vi của họ khác nhau hoàn toàn. New user cần guidance. User đang trong position cần speed.
+Không phải "user" chung chung. Phải cụ thể: New user chưa từng tương tác với hệ thống? Hay user đang trong workflow quan trọng và cần thông tin gấp? Hành vi của họ khác nhau hoàn toàn. New user cần guidance. User đang trong workflow cần speed.
 
 **"What" — Họ muốn đạt được điều gì?**
 
@@ -58,7 +58,7 @@ Network timeout giữa chừng thì sao? User cancel action khi system đang x�
 
 Trong dự án mình, requirement không được communicate qua lời nói hay chat message. Nó được viết thành file `.yaml` dưới `config/`.
 
-Ví dụ: file `agents.yaml` định nghĩa behavior của từng agent — name, role, description, model profile, routing path. File `trading.yaml` định nghĩa safety limits — max position size, leverage rules, stop-loss requirements. File `models.yaml` định nghĩa ai dùng model nào, profile nào, CLI nào.
+Ví dụ: file định nghĩa behavior của từng agent — name, role, description, model profile, routing path. File định nghĩa safety limits — max resource usage, retry rules, timeout requirements. File định nghĩa ai dùng model nào, profile nào, CLI nào.
 
 Khi mình cần thay đổi behavior của hệ thống, mình không nói với AI "em sửa cái này cho anh." Mình update file config, và AI đọc config đó để biết phải làm gì.
 
